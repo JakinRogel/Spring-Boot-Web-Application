@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta charset="ISO-8859-1">
+<title>Movie Management</title>
+<link rel="stylesheet" href="https://maxcdn.boots	apcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Movie Management</h1>
+		<hr>
+		<h2>Update Movie</h2>
+		<form action="#" th:action="@{/saveMovie}" th:object = "${movie}" method="POST">
+		
+			<input type="hidden" th:field="*{id}" />
+			<input type="text" th:field = "*{orderNo}" class="form-control mb-4 col-4"></input>
+			<input type="text" th:field = "*{productName}" class="form-control mb-4 col-4"></input>
+			<input type="text" th:field = "*{genre}" class="form-control mb-4 col-4"></input>
+			<input type="number" th:field = "*{price}" class="form-control mb-4 col-4"></input>
+			<button type="submit" class="btn btn-info col-2">Save movie</button>
+		</form>
+	</div>
+</body>
+</html>
